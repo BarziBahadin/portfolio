@@ -13,16 +13,16 @@ export default function Skills() {
           {skillGroups.map((group) => (
             <div
               key={group.label}
-              className="rounded-xl border border-[#1e2d4a] bg-[#0f1629] p-6"
+              className="rounded-xl border border-[#1a2535] bg-[#0f1419] p-6"
             >
-              <h3 className="text-sm font-semibold text-blue-400 uppercase tracking-widest mb-5">
+              <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-widest mb-5">
                 {group.label}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {group.items.map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1.5 rounded-lg text-sm text-slate-300 border border-[#1e2d4a] bg-[#0a0e1a] hover:border-blue-500/40 hover:text-white transition-colors"
+                    className="px-3 py-1.5 rounded-lg text-sm text-slate-300 border border-[#1a2535] bg-[#080a0d] hover:border-cyan-500/40 hover:text-white transition-colors"
                   >
                     {skill}
                   </span>
@@ -39,8 +39,8 @@ export default function Skills() {
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex items-center gap-3 mb-3">
-      <span className="w-8 h-px bg-blue-500" />
-      <span className="text-blue-400 text-sm font-medium uppercase tracking-widest">
+      <span className="w-8 h-px bg-cyan-500" />
+      <span className="text-cyan-400 text-sm font-medium uppercase tracking-widest">
         {children}
       </span>
     </div>

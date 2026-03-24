@@ -29,12 +29,12 @@ export default function About() {
             {stats.map((s) => (
               <div
                 key={s.label}
-                className="rounded-xl border border-[#1e2d4a] bg-[#0f1629] p-5 text-center"
+                className="rounded-xl border border-[#1a2535] bg-[#0f1419] p-5 text-center"
               >
                 <div
                   className="text-2xl font-bold bg-clip-text text-transparent mb-1"
                   style={{
-                    backgroundImage: "linear-gradient(135deg, #3b82f6, #8b5cf6)",
+                    backgroundImage: "linear-gradient(135deg, #06b6d4, #8b5cf6)",
                   }}
                 >
                   {s.value}
@@ -52,8 +52,8 @@ export default function About() {
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex items-center gap-3 mb-3">
-      <span className="w-8 h-px bg-blue-500" />
-      <span className="text-blue-400 text-sm font-medium uppercase tracking-widest">
+      <span className="w-8 h-px bg-cyan-500" />
+      <span className="text-cyan-400 text-sm font-medium uppercase tracking-widest">
         {children}
       </span>
     </div>

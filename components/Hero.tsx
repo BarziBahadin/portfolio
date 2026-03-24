@@ -11,20 +11,20 @@ export default function Hero() {
         className="absolute inset-0 opacity-20"
         style={{
           backgroundImage: `
-            linear-gradient(rgba(59,130,246,0.15) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(59,130,246,0.15) 1px, transparent 1px)
+            linear-gradient(rgba(6,182,212,0.15) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(6,182,212,0.15) 1px, transparent 1px)
           `,
           backgroundSize: "60px 60px",
         }}
       />
 
       {/* Glow blobs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-600/20 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-600/15 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/40 bg-blue-500/10 text-blue-400 text-sm mb-8">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-cyan-500/40 bg-cyan-500/10 text-cyan-400 text-sm mb-8">
           <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
           Available for opportunities
         </div>
@@ -35,7 +35,7 @@ export default function Hero() {
           <span
             className="bg-clip-text text-transparent"
             style={{
-              backgroundImage: "linear-gradient(135deg, #3b82f6, #8b5cf6)",
+              backgroundImage: "linear-gradient(135deg, #06b6d4, #8b5cf6)",
             }}
           >
             {profile.name.split(" ").slice(1).join(" ")}
@@ -58,8 +58,8 @@ export default function Hero() {
             href="#contact"
             className="px-8 py-3 rounded-lg font-semibold text-white transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5"
             style={{
-              background: "linear-gradient(135deg, #3b82f6, #8b5cf6)",
-              boxShadow: "0 0 20px rgba(59,130,246,0.4)",
+              background: "linear-gradient(135deg, #06b6d4, #8b5cf6)",
+              boxShadow: "0 0 20px rgba(6,182,212,0.4)",
             }}
           >
             Get in Touch
@@ -67,7 +67,7 @@ export default function Hero() {
           <a
             href="/Barzi_Bahadin.pdf"
             download
-            className="px-8 py-3 rounded-lg font-semibold text-slate-300 border border-slate-600 hover:border-blue-500 hover:text-white transition-all duration-200 hover:-translate-y-0.5"
+            className="px-8 py-3 rounded-lg font-semibold text-slate-300 border border-slate-600 hover:border-cyan-500 hover:text-white transition-all duration-200 hover:-translate-y-0.5"
           >
             Download CV
           </a>

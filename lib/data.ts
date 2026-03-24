@@ -10,7 +10,7 @@ export const profile = {
   email: "barzibahadin@yahoo.com",
   phone: "+964 771 0297 793",
   linkedin: "https://www.linkedin.com/in/barzibahadin",
-  github: "", // add your GitHub URL here when ready
+  github: "https://github.com/BarziBahadin",
   location: "Kurdistan Region, Iraq",
   summary:
     "I hold a Bachelor's Degree in Computer Engineering from Komar University of Science and Technology and have built a diverse career in IT support, database administration, data analysis, and customer care leadership at Ruyat Technologies. Starting as an IT Help Desk Specialist, I advanced through Database Administrator, Data Analyst, and now lead the Customer Care department — building data pipelines, Power BI dashboards, and actionable reporting for management. Alongside my corporate work, I have been an Academic Writer and Editor since 2020, producing research and theses across Business, Accounting, Medicine, Engineering, and Science.",
@@ -189,5 +189,8 @@ export const navLinks = [
   { label: "Skills", href: "#skills" },
   { label: "Certifications", href: "#certifications" },
   { label: "Education", href: "#education" },
+  { label: "Projects", href: "#projects" },
+  { label: "Research", href: "#research" },
+  { label: "All Papers", href: "/research" },
   { label: "Contact", href: "#contact" },
 ];

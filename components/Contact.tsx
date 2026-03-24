@@ -46,7 +46,7 @@ const contactItems = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 px-6 bg-[#080c18]">
+    <section id="contact" className="py-24 px-6 bg-[#080a0d]">
       <div className="max-w-6xl mx-auto">
         <SectionLabel>Contact</SectionLabel>
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -60,8 +60,8 @@ export default function Contact() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {contactItems.map((item) => {
             const inner = (
-              <div className="rounded-xl border border-[#1e2d4a] bg-[#0f1629] p-5 h-full hover:border-blue-500/40 transition-colors duration-300 group">
-                <div className="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-4 group-hover:bg-blue-500/20 transition-colors">
+              <div className="rounded-xl border border-[#1a2535] bg-[#0f1419] p-5 h-full hover:border-cyan-500/40 transition-colors duration-300 group">
+                <div className="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 mb-4 group-hover:bg-cyan-500/20 transition-colors">
                   {item.icon}
                 </div>
                 <p className="text-xs text-slate-500 uppercase tracking-widest mb-1">
@@ -90,8 +90,8 @@ export default function Contact() {
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex items-center gap-3 mb-3">
-      <span className="w-8 h-px bg-blue-500" />
-      <span className="text-blue-400 text-sm font-medium uppercase tracking-widest">
+      <span className="w-8 h-px bg-cyan-500" />
+      <span className="text-cyan-400 text-sm font-medium uppercase tracking-widest">
         {children}
       </span>
     </div>

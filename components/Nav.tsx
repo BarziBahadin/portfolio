@@ -1,11 +1,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter, usePathname } from "next/navigation";
 import { navLinks, profile } from "@/lib/data";
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -19,27 +22,33 @@ export default function Nav() {
   ) => {
     e.preventDefault();
     setMenuOpen(false);
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    if (href.startsWith("/")) {
+      router.push(href);
+    } else if (pathname === "/") {
+      const el = document.querySelector(href);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      router.push("/" + href);
+    }
   };
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#0a0e1a]/95 backdrop-blur border-b border-[#1e2d4a] shadow-lg"
+          ? "bg-[#080a0d]/95 backdrop-blur border-b border-[#1a2535] shadow-lg"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
         {/* Logo */}
         <a
-          href="#hero"
+          href={pathname === "/" ? "#hero" : "/"}
           onClick={(e) => handleNavClick(e, "#hero")}
-          className="font-semibold text-white tracking-wide hover:text-blue-400 transition-colors"
+          className="font-semibold text-white tracking-wide hover:text-cyan-400 transition-colors"
         >
           {profile.name.split(" ")[0]}{" "}
-          <span className="text-blue-400">
+          <span className="text-cyan-400">
             {profile.name.split(" ").slice(1).join(" ")}
           </span>
         </a>
@@ -79,7 +88,7 @@ export default function Nav() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-[#0f1629] border-t border-[#1e2d4a] px-6 py-4">
+        <div className="md:hidden bg-[#0f1419] border-t border-[#1a2535] px-6 py-4">
           <ul className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <li key={link.href}>

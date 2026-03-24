@@ -13,7 +13,7 @@ export default function Education() {
           {education.map((edu, i) => (
             <div
               key={i}
-              className="rounded-xl border border-[#1e2d4a] bg-[#0f1629] p-6 flex flex-wrap md:flex-nowrap gap-6 items-center"
+              className="rounded-xl border border-[#1a2535] bg-[#0f1419] p-6 flex flex-wrap md:flex-nowrap gap-6 items-center"
             >
               {/* Icon */}
               <div className="w-14 h-14 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center shrink-0">
@@ -53,7 +53,7 @@ export default function Education() {
                 <div
                   className="text-xl font-bold bg-clip-text text-transparent"
                   style={{
-                    backgroundImage: "linear-gradient(135deg, #3b82f6, #8b5cf6)",
+                    backgroundImage: "linear-gradient(135deg, #06b6d4, #8b5cf6)",
                   }}
                 >
                   {edu.gpa}
@@ -70,8 +70,8 @@ export default function Education() {
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex items-center gap-3 mb-3">
-      <span className="w-8 h-px bg-blue-500" />
-      <span className="text-blue-400 text-sm font-medium uppercase tracking-widest">
+      <span className="w-8 h-px bg-cyan-500" />
+      <span className="text-cyan-400 text-sm font-medium uppercase tracking-widest">
         {children}
       </span>
     </div>
